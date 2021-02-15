@@ -49,8 +49,8 @@ class Voetbalclub {
 
     Voetbalclub(String n){
         this.naam = n;
-        if (n = ""){
-            this.naam = "FC"
+        if (n == ""){
+            this.naam = "FC";
         }
     }
 
