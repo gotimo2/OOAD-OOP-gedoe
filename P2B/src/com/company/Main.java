@@ -21,7 +21,7 @@ public class Main {
 
 class Voetbalclub {
 
-    private String naam = "";
+    private String naam = "FC";
     private int aantalGewonnen = 0;
     private int aantalGelijk = 0;
     private int aantalVerloren = 0;
@@ -49,6 +49,9 @@ class Voetbalclub {
 
     Voetbalclub(String n){
         this.naam = n;
+        if (n = ""){
+            this.naam = "FC"
+        }
     }
 
 
