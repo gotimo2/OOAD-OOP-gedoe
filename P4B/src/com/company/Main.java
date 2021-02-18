@@ -28,69 +28,6 @@ public class Main {
     }
 }
 
-class AutoHuur{
-    private com.company.Klant huurder;
-    private com.company.Auto gehuurdeAuto;
-    private int aantalDagen;
-
-    AutoHuur(){
-
-    }
-
-    public void setAantalDagen(int ant){
-        aantalDagen = ant;
-    }
-
-    public void setHuurder(com.company.Klant kl) {
-        huurder = kl;
-    }
-
-    public void setGehuurdeAuto(com.company.Auto au) {
-        gehuurdeAuto = au;
-    }
-
-    public com.company.Auto getGehuurdeAuto() {
-        return gehuurdeAuto;
-    }
-
-    public String toString(){
-
-        String outputString = "";
-
-        if (gehuurdeAuto != null ){
-            outputString += "autotype:" + gehuurdeAuto.toString() + "\n";
-        }
-
-        if (gehuurdeAuto == null){
-            outputString += "er is geen auto bekend \n";
-        }
-
-        if (huurder != null){
-            outputString += "Op naam van:" + huurder.toString() + "\n";
-        }
-
-        if (huurder == null){
-            outputString += "er is geen huurder bekend \n";
-        }
-
-        if (huurder != null && gehuurdeAuto != null) {
-            outputString += String.format("Aantal dagen: %s en dat kost %s ",
-                    this.aantalDagen,
-                    this.gehuurdeAuto.getPrijsPerDag() * this.aantalDagen * (1 - (this.huurder.getKorting() / 100)));
-        }
-
-        if (aantalDagen == 0 ){
-            outputString += "Aantal dagen: 0 en dat kost 0.0";
-        }
-
-
-
-
-        return(outputString);
-
-    }
-}
-
 class Klant{
     private double korting;
     public String naam;
